@@ -10,7 +10,7 @@ setup(
     license="MIT",
     packages=["falcon_casbin"],
     zip_safe=False,
-    install_requires=["falcon>=2.0.0"],
+    install_requires=["casbin>=1.15.0", "falcon>=2.0.0"],
     setup_requires=["pytest-runner>=5.3.1"],
     tests_require=["pytest>=6.2.5"],
     platforms="any",
