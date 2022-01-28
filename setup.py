@@ -12,7 +12,7 @@ setup(
     zip_safe=False,
     install_requires=["casbin>=1.15.0", "falcon>=2.0.0"],
     setup_requires=["pytest-runner>=5.3.1"],
-    tests_require=["pytest>=6.2.5"],
+    tests_require=["pretend>=1.0.9", "pytest>=6.2.5"],
     platforms="any",
     classifiers=[
         "Intended Audience :: Developers",
