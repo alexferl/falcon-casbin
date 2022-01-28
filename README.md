@@ -16,7 +16,7 @@ from falcon_casbin import CasbinMiddleware
 
 casbin = CasbinMiddleware("path/to/model.conf", "path/to/policy.csv")
 
-api = falcon.App(middleware=[casbin])
+app = falcon.App(middleware=[casbin])
 ```
 
 ## Credits
