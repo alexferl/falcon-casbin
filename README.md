@@ -1,4 +1,4 @@
-# falcon-casbin [![Build Status](https://travis-ci.com/alexferl/falcon-casbin.svg?branch=master)](https://app.travis-ci.com/github/alexferl/falcon-casbin) [![codecov](https://codecov.io/gh/alexferl/falcon-casbin/branch/master/graph/badge.svg)](https://codecov.io/gh/alexferl/falcon-casbin)
+# falcon-casbin [![codecov](https://codecov.io/gh/alexferl/falcon-casbin/branch/master/graph/badge.svg)](https://codecov.io/gh/alexferl/falcon-casbin)
 
 A simple [Falcon](https://github.com/falconry/falcon) module for [Casbin](https://casbin.org/) using
 [RBAC](https://casbin.org/docs/en/rbac).
