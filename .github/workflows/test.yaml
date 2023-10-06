@@ -1,0 +1,52 @@
+name: Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: '${{ matrix.os }}'
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python-version: '3.8'
+            FALCON: 3.1.1
+          - os: ubuntu-latest
+            python-version: '3.8'
+            FALCON: 3.0.1
+          - os: ubuntu-latest
+            python-version: '3.9'
+            FALCON: 3.1.1
+          - os: ubuntu-latest
+            python-version: '3.9'
+            FALCON: 3.0.1
+          - os: ubuntu-latest
+            python-version: '3.10'
+            FALCON: 3.1.1
+          - os: ubuntu-latest
+            python-version: '3.10'
+            FALCON: 3.0.1
+          - os: ubuntu-latest
+            python-version: '3.11'
+            FALCON: 3.1.1
+          - os: ubuntu-latest
+            python-version: '3.11'
+            FALCON: 3.0.1
+    steps:
+      - name: 'Set up Python ${{ matrix.python-version }}'
+        uses: actions/setup-python@v2
+        with:
+          python-version: '${{ matrix.python-version }}'
+      - uses: actions/checkout@v2
+      - run: pip install FALCON==$FALCON
+        env:
+          FALCON: '${{ matrix.FALCON }}'
+      - run: pip install pytest-cov codecov
+      - run: pip install -r requirements-dev.txt .
+      - run: pip install .
+      - run: pytest --cov=./falcon_casbin
+      - run: codecov

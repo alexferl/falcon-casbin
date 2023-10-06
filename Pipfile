@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+falcon = "==3.0.0"
+
+[dev-packages]
+black = "==23.9.1"
+pre-commit = "==3.4.0"
+pretend = "==1.0.9"
+pytest = "==7.4.2"
