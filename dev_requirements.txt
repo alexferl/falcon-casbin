@@ -1,6 +1,0 @@
-black==21.12b0
-pre-commit==2.17.0
-pretend==1.0.9
-pytest==6.2.5
-
--r requirements.txt
